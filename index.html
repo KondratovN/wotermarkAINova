@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Watermark Tool</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="card">
+
+<h1>Watermark Tool</h1>
+<p class="subtitle">Добавьте водяной знак к изображению</p>
+
+<label class="upload">
+<input type="file" id="imageInput" accept="image/*">
+<span>Выбрать изображение</span>
+</label>
+
+<div id="uploadStatus" class="status"></div>
+
+<button id="processBtn">
+Добавить водяной знак
+</button>
+
+<div id="watermarkStatus" class="status"></div>
+
+<a id="downloadBtn" download="watermarked.png">
+Скачать изображение
+</a>
+
+</div>
+
+<canvas id="canvas"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
