@@ -55,3 +55,30 @@ downloadBtn.classList.add("active")
 watermarkStatus.innerText = "✔ Водяной знак добавлен"
 
 })
+
+document.addEventListener("paste", function(e){
+
+const items = e.clipboardData.items
+
+for (let i = 0; i < items.length; i++) {
+
+if (items[i].type.indexOf("image") !== -1) {
+
+const file = items[i].getAsFile()
+
+const reader = new FileReader()
+
+reader.onload = function(event){
+
+uploadedImage.src = event.target.result
+uploadStatus.innerText = "✔ Изображение вставлено из буфера"
+
+}
+
+reader.readAsDataURL(file)
+
+}
+
+}
+
+})
